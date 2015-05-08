@@ -13,7 +13,7 @@ class GithubTrello < Sinatra::Base
 
   get '/' do
     erb "<h1>It works!</h1>" +
-        "<div>But you should add the url: '#{base_url}/payload' to your git repo web hooks to integrate it with your Trello board.</div>"
+        "<div>But you should add the url: '#{base_url}/payload' to your git repo web hooks to integrate it with your Trello board...</div>"
   end
 
   post '/payload' do
