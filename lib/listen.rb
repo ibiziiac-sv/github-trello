@@ -1,10 +1,20 @@
 require 'sinatra'
+require "sinatra/reloader"
+require 'pry'
 require 'json'
 require 'client'
 require 'comment_formatter'
 require 'message_parser'
 
 class GithubTrello < Sinatra::Base
+  configure :development do
+    register Sinatra::Reloader
+  end
+
+  get '/' do
+    "It works!"
+  end
+
   post '/payload' do
     if params[:payload]
       push = JSON.parse(params[:payload])
