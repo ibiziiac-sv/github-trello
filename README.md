@@ -9,7 +9,7 @@ with some details.
   1. Go to Settings for the repo.
   1. Click Webhooks & Services.
   1. Click Add Webhook
-  1. Paste http://gaslight-github-trello.herokuapp.com/payload
+  1. Paste https://github-trello-ion.herokuapp.com/payload
   1. Save and profit!!!
 1. Make sure your Trello user (Wendell in our case) has access to the
    board.
@@ -39,7 +39,7 @@ with some details.
 
 It's a little Sinatra app.
 
-1. `git clone https://github.com/gaslight/github-trello.git`
+1. `git clone https://github.com/ibiziiac-sv/github-trello.git`
 1. `bundle install`
 
 ### Testing
