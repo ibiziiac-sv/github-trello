@@ -12,7 +12,8 @@ class GithubTrello < Sinatra::Base
   end
 
   get '/' do
-    "It works!"
+    erb "<h1>It works!</h1>" +
+        "<div>But you should add the url: '#{base_url}/payload' to your git repo web hooks to integrate it with your Trello board.</div>"
   end
 
   post '/payload' do
@@ -30,6 +31,12 @@ class GithubTrello < Sinatra::Base
         @card.add_comment(comment)
       end
     end
+  end
+
+  private
+
+  def base_url
+    @base_url ||= "#{request.env['rack.url_scheme']}://#{request.env['HTTP_HOST']}"
   end
 end
 
